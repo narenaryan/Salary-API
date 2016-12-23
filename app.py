@@ -22,14 +22,16 @@ class Departments_Meta(Resource):
 class Departmental_Salary(Resource):
     def get(self, department_name):
     	conn = e.connect()
+
+        # subset database based on department name, eg police
     	query = conn.execute("select * from salaries where Department='%s'"%department_name.upper())
         #Query the result and get cursor.Dumping that data to a JSON is looked by extension
         result = {'data': [dict(zip(tuple (query.keys()) ,i)) for i in query.cursor]}
         return result
     #We can have PUT,DELETE,POST here. But in our API GET implementation is sufficient
        
-api.add_resource(Departmental_Salary, '/dept/<string:department_name>')
-api.add_resource(Departments_Meta, '/departments')
+api.add_resource(Departments_Meta, '/departments') # this resource shows salary information for all deparments
+api.add_resource(Departmental_Salary, '/dept/<string:department_name>') # this resource shows salaries for a specific department
 
 if __name__ == '__main__':
     app.run(debug=True)

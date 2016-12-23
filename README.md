@@ -1,7 +1,7 @@
 # REST API
 
 ## what is this?
-Chicago city employees Salary API built in one hour with Python and Flask under 35 lines of code 
+simple api example using python flask
 
 ## install
 
@@ -9,9 +9,13 @@ Chicago city employees Salary API built in one hour with Python and Flask under 
 pip install -r requirements.txt
 ```
 
-# run
+## run
 ```
 python app.py
 ```
 
 then go to http://localhost:5000/departments
+
+you could drill down by deparments too!
+
+try http://localhost:5000/dept/police
