@@ -1,7 +1,8 @@
 # REST API
 
 ## what is this?
-simple api example using python flask
+simple api example using flask. a flask api object contains one or more functionalities (GET, POST, etc). 
+
 
 ## install
 
