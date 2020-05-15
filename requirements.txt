@@ -1,5 +1,5 @@
 aniso8601==1.0.0
-Flask==0.10.1
+Flask==1.0
 Flask-RESTful==0.3.3
 itsdangerous==0.24
 Jinja2==2.7.3
